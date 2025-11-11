@@ -11,11 +11,11 @@ import {
 } from "@/store/slices/foodSlice/thunks";
 import Header from "@/components/layout/Header";
 import HeroSection from "@/components/layout/HeroSection";
-// import FoodGrid from "@/components/food/FoodGrid";
+import FoodGrid from "@/components/food/FoodGrid";
 import Footer from "@/components/layout/Footer";
-// import AddFoodModal from "@/components/modals/AddFoodModal";
-// import EditFoodModal from "@/components/modals/EditFoodModal";
-// import DeleteFoodModal from "@/components/modals/DeleteFoodModal";
+import AddFoodModal from "@/components/modals/AddFoodModal";
+import EditFoodModal from "@/components/modals/EditFoodModal";
+import DeleteFoodModal from "@/components/modals/DeleteFoodModal";
 import { Food, FormData } from "@/types";
 
 export default function Home() {
@@ -34,11 +34,11 @@ export default function Home() {
   }, [dispatch]);
 
   const handleSearch = (query: string) => {
-    if (query.trim()) {
-      dispatch(searchFoods(query));
-    } else {
-      dispatch(fetchFoods());
-    }
+    // if (query.trim()) {
+    //   dispatch(searchFoods(query));
+    // } else {
+    //   dispatch(fetchFoods());
+    // }
   };
 
   const handleAddFood = async (formData: FormData) => {
@@ -106,36 +106,36 @@ export default function Home() {
     <div className="food-app">
       <Header onAddClick={() => setShowAddModal(true)} />
       <HeroSection onSearch={handleSearch} />
-      {/* <FoodGrid
+      <FoodGrid
         foods={filteredFoods}
         loading={loading}
         onEdit={openEditModal}
         onDelete={openDeleteModal}
-      /> */}
+      />
       <Footer />
 
-      {/* {showAddModal && (
+      {showAddModal && (
         <AddFoodModal
           onClose={() => setShowAddModal(false)}
           onSubmit={handleAddFood}
         />
-      )} */}
+      )}
 
-      {/* {showEditModal && selectedFood && (
+      {showEditModal && selectedFood && (
         <EditFoodModal
           food={selectedFood}
           onClose={() => setShowEditModal(false)}
           onSubmit={handleEditFood}
         />
-      )} */}
+      )}
 
-      {/* {showDeleteModal && selectedFood && (
+      {showDeleteModal && selectedFood && (
         <DeleteFoodModal
           food={selectedFood}
           onClose={() => setShowDeleteModal(false)}
           onConfirm={handleDeleteFood}
         />
-      )} */}
+      )}
     </div>
   );
 }
