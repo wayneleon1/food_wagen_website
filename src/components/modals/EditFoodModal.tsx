@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
-import { X, Loader2 } from "lucide-react";
 import { Food, FormData, FormErrors } from "@/types";
-import { validateFoodForm } from "@/utils/validation";
 import { RESTAURANT_STATUS } from "@/utils/constants";
-import Modal from "./Modal";
+import { validateFoodForm } from "@/utils/validation";
+import { X } from "lucide-react";
+import React, { useEffect, useState } from "react";
+import Button from "../ui/Button";
 import Input from "../ui/Input";
 import Select from "../ui/Select";
-import Button from "../ui/Button";
+import Modal from "./Modal";
 
 interface EditFoodModalProps {
   food: Food;
