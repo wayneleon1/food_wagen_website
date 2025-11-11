@@ -1,4 +1,4 @@
-export const API_BASE_URL = "https://6852821e0594059b23cdd834.mockapi.io";
+export const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 
 export const RESTAURANT_STATUS = {
   OPEN: "Open Now",
