@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import FoodSearch from "../food/FoodSearch";
+import FoodSearch from "../food/FoodSearch";
 
 interface HeroSectionProps {
   onSearch: (query: string) => void;
@@ -88,7 +88,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onSearch }) => {
               </button>
             </div>
 
-            {/* <FoodSearch onSearch={onSearch} /> */}
+            <FoodSearch onSearch={onSearch} />
           </div>
         </div>
       </div>
