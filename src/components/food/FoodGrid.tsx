@@ -64,7 +64,7 @@ const FoodGrid: React.FC<FoodGridProps> = ({
             color: "#333",
           }}
         >
-          Featured Meals
+          Featured
         </h2>
 
         <div

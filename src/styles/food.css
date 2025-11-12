@@ -42,6 +42,13 @@
   background-color: #f9f9f9;
 }
 
+.food-search-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+}
+
 /* Food Card Styles */
 .food-card {
   animation: slideUp 300ms ease-out;
@@ -127,11 +134,24 @@
 }
 
 @media (max-width: 768px) {
+  .food-search-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
   .food-modal {
     max-width: 100%;
     width: 100%;
     margin: 0;
   }
+}
+
+@media (max-width: 1200px) {
+  
+  .food-hero-image{
+    display: none;
+  }
+
 }
 
 /* Input Styles */

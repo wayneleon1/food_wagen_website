@@ -1,6 +1,7 @@
 import React from "react";
 import { Edit2, Trash2 } from "lucide-react";
 import { Food } from "@/types";
+import Image from "next/image";
 
 interface FoodCardProps {
   food: Food;
@@ -58,14 +59,23 @@ const FoodCard: React.FC<FoodCardProps> = ({ food, onEdit, onDelete }) => {
             position: "absolute",
             top: "1rem",
             left: "1rem",
-            background: "#ff6b6b",
+            background: "#F17228",
             color: "white",
-            padding: "0.25rem 0.75rem",
-            borderRadius: "20px",
+            padding: "8px 16px",
+            borderRadius: "8px",
             fontSize: "14px",
             fontWeight: "bold",
+            display: "flex",
+            alignItems: "center",
           }}
         >
+          <Image
+            src="/images/tag.svg"
+            alt="Price Tag Icon"
+            width={18}
+            height={18}
+            style={{ display: "inline-flex", marginRight: "6px" }}
+          />
           <span className="food-price">
             ${food.food_price || food.Price || "0.00"}
           </span>
@@ -87,9 +97,11 @@ const FoodCard: React.FC<FoodCardProps> = ({ food, onEdit, onDelete }) => {
               src={restaurant.logo}
               alt={restaurant.name}
               className="restaurant-logo"
+              width={64}
+              height={64}
               style={{
-                width: "40px",
-                height: "40px",
+                width: "64px",
+                height: "64px",
                 borderRadius: "8px",
                 objectFit: "cover",
               }}
@@ -114,9 +126,16 @@ const FoodCard: React.FC<FoodCardProps> = ({ food, onEdit, onDelete }) => {
             >
               <span
                 className="food-rating"
-                style={{ color: "#ffa500", fontSize: "14px" }}
+                style={{ color: "#FFB30E", fontSize: "14px" }}
               >
-                ⭐ {food.rating}
+                <Image
+                  src="/images/star.svg"
+                  alt="Star Icon"
+                  width={14}
+                  height={14}
+                  style={{ display: "inline-flex", marginRight: "4px" }}
+                />
+                {food.rating}
               </span>
             </div>
           </div>
@@ -158,24 +177,25 @@ const FoodCard: React.FC<FoodCardProps> = ({ food, onEdit, onDelete }) => {
           }}
         >
           <span
-            className="restaurant-name"
-            style={{ fontSize: "14px", color: "#666" }}
-          >
-            {restaurant.name}
-          </span>
-          <span
             className="restaurant-status"
             style={{
               fontSize: "12px",
               padding: "0.25rem 0.75rem",
               borderRadius: "12px",
               background:
-                restaurant.status === "Open Now" ? "#d4edda" : "#f8d7da",
-              color: restaurant.status === "Open Now" ? "#155724" : "#721c24",
+                restaurant.status === "Open Now" || restaurant.status === "Open"
+                  ? "#79B93C33"
+                  : "#F1722833",
+              color:
+                restaurant.status === "Open Now" || restaurant.status === "Open"
+                  ? "#79B93C"
+                  : "#F17228",
               fontWeight: 600,
             }}
           >
-            {restaurant.status}
+            {restaurant.status === "Open Now" || restaurant.status === "Open"
+              ? "Open"
+              : restaurant.status}
           </span>
         </div>
       </div>

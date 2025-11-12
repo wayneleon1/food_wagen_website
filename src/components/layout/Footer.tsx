@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Footer: React.FC = () => {
@@ -204,13 +205,31 @@ const Footer: React.FC = () => {
             </h4>
             <div style={{ display: "flex", gap: "1rem", marginBottom: "1rem" }}>
               <a href="#" style={{ color: "#ccc", fontSize: "20px" }}>
-                📷
+                <Image
+                  src="/images/instagram.svg"
+                  alt="Instagram Icon"
+                  width={20}
+                  height={20}
+                  style={{ display: "inline-flex" }}
+                />
               </a>
               <a href="#" style={{ color: "#ccc", fontSize: "20px" }}>
-                📘
+                <Image
+                  src="/images/facebook.svg"
+                  alt="Facebook Icon"
+                  width={20}
+                  height={20}
+                  style={{ display: "inline-flex" }}
+                />
               </a>
               <a href="#" style={{ color: "#ccc", fontSize: "20px" }}>
-                🐦
+                <Image
+                  src="/images/twitter.svg"
+                  alt="Twitter Icon"
+                  width={20}
+                  height={20}
+                  style={{ display: "inline-flex" }}
+                />
               </a>
             </div>
             <p
@@ -224,10 +243,12 @@ const Footer: React.FC = () => {
                 placeholder="Enter Your email"
                 style={{
                   flex: 1,
-                  padding: "0.5rem 0.75rem",
-                  borderRadius: "6px",
+                  padding: "12px 16px",
+                  borderRadius: "8px",
                   border: "none",
                   fontSize: "14px",
+                  background: "#424242",
+                  color: "#ADADAD",
                 }}
               />
               <button
@@ -262,8 +283,8 @@ const Footer: React.FC = () => {
             color: "#999",
           }}
         >
-          <span>All rights Reserved © Your Company, 2021</span>
-          <span>Made with ❤️ by Themewagon</span>
+          <span>All rights Reserved © Your Company, 2025</span>
+          <span>Developed by Rurangwa Leo</span>
         </div>
       </div>
     </footer>

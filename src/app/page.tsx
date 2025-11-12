@@ -34,11 +34,11 @@ export default function Home() {
   }, [dispatch]);
 
   const handleSearch = (query: string) => {
-    // if (query.trim()) {
-    //   dispatch(searchFoods(query));
-    // } else {
-    //   dispatch(fetchFoods());
-    // }
+    if (query.trim()) {
+      dispatch(searchFoods(query));
+    } else {
+      dispatch(fetchFoods());
+    }
   };
 
   const handleAddFood = async (formData: FormData) => {

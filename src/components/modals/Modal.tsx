@@ -20,10 +20,13 @@ const Modal: React.FC<ModalProps> = ({
         inset: 0,
         background: "rgba(0, 0, 0, 0.5)",
         display: "flex",
-        alignItems: "center",
+        alignItems: "flex-start", // align to top
         justifyContent: "center",
         zIndex: 1000,
-        padding: "1rem",
+        paddingTop: "2.5rem", // space from the very top
+        paddingLeft: "1rem",
+        paddingRight: "1rem",
+        paddingBottom: "1rem",
       }}
     >
       <div

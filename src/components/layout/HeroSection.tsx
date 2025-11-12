@@ -15,7 +15,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onSearch }) => {
     <section
       style={{
         background: "#FFB30E",
-        padding: "140px 0px",
+        padding: "140px 20px",
         color: "white",
         position: "relative",
         overflow: "hidden",
@@ -59,16 +59,26 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onSearch }) => {
                   padding: "0.5rem 1rem",
                   border: "none",
                   background:
-                    deliveryMode === "delivery" ? "#ffa500" : "transparent",
-                  color: deliveryMode === "delivery" ? "white" : "#666",
+                    deliveryMode === "delivery" ? "#F172281A" : "transparent",
+                  color: deliveryMode === "delivery" ? "#F17228" : "#757575",
                   borderRadius: "6px",
                   cursor: "pointer",
                   fontWeight: 600,
                   fontSize: "14px",
                   transition: "all 150ms",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.5rem",
                 }}
               >
-                🚚 Delivery
+                <Image
+                  src="/images/bike.svg"
+                  alt="Delivery Icon"
+                  width={24}
+                  height={24}
+                  style={{ display: "inline-flex" }}
+                />
+                <span>Delivery</span>
               </button>
               <button
                 onClick={() => setDeliveryMode("pickup")}
@@ -76,16 +86,26 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onSearch }) => {
                   padding: "0.5rem 1rem",
                   border: "none",
                   background:
-                    deliveryMode === "pickup" ? "#ffa500" : "transparent",
-                  color: deliveryMode === "pickup" ? "white" : "#666",
+                    deliveryMode === "pickup" ? "#F172281A" : "transparent",
+                  color: deliveryMode === "pickup" ? "#F17228" : "#757575",
                   borderRadius: "6px",
                   cursor: "pointer",
                   fontWeight: 600,
                   fontSize: "14px",
                   transition: "all 150ms",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.5rem",
                 }}
               >
-                📦 Pickup
+                <Image
+                  src="/images/cart.svg"
+                  alt="Cart Icon"
+                  width={24}
+                  height={24}
+                  style={{ display: "inline-flex" }}
+                />
+                <span>Pickup</span>
               </button>
             </div>
 
@@ -94,23 +114,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onSearch }) => {
         </div>
       </div>
 
-      {/* Decorative food image (optional) */}
-      {/* <div
-        style={{
-          position: "absolute",
-          right: "-50px",
-          top: "50%",
-          transform: "translateY(-50%)",
-          fontSize: "300px",
-          opacity: 0.1,
-          pointerEvents: "none",
-        }}
-      >
-        🍜
-      </div> */}
       <Image
         src="/images/ImageBase.svg"
         alt="Decorative Food Image"
+        className="food-hero-image"
         width={497}
         height={497}
         style={{

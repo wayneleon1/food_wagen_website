@@ -1,4 +1,3 @@
-
 @import '../styles/food.css';
 
 :root {
@@ -167,6 +166,7 @@ button {
 
 /* Responsive Design Helpers */
 @media (max-width: 640px) {
+  
   .container {
     padding: 0 0.75rem;
   }
