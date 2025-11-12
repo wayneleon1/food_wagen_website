@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import FoodSearch from "../food/FoodSearch";
+import Image from "next/image";
 
 interface HeroSectionProps {
   onSearch: (query: string) => void;
@@ -13,14 +14,14 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onSearch }) => {
   return (
     <section
       style={{
-        background: "linear-gradient(135deg, #ffa500 0%, #ff8c00 100%)",
-        padding: "4rem 2rem",
+        background: "#FFB30E",
+        padding: "140px 0px",
         color: "white",
         position: "relative",
         overflow: "hidden",
       }}
     >
-      <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+      <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
         <div style={{ maxWidth: "600px" }}>
           <h1
             style={{
@@ -94,7 +95,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onSearch }) => {
       </div>
 
       {/* Decorative food image (optional) */}
-      <div
+      {/* <div
         style={{
           position: "absolute",
           right: "-50px",
@@ -106,7 +107,19 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onSearch }) => {
         }}
       >
         🍜
-      </div>
+      </div> */}
+      <Image
+        src="/images/ImageBase.svg"
+        alt="Decorative Food Image"
+        width={497}
+        height={497}
+        style={{
+          position: "absolute",
+          right: "100px",
+          top: "20%",
+          pointerEvents: "none",
+        }}
+      />
     </section>
   );
 };

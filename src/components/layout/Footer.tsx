@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
     <footer
       style={{ background: "#2c2c2c", color: "white", padding: "3rem 2rem" }}
     >
-      <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+      <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
         <div
           style={{
             display: "grid",

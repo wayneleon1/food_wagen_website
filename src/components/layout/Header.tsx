@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 interface HeaderProps {
@@ -18,7 +19,7 @@ const Header: React.FC<HeaderProps> = ({ onAddClick }) => {
     >
       <div
         style={{
-          maxWidth: "1200px",
+          maxWidth: "1400px",
           margin: "0 auto",
           display: "flex",
           justifyContent: "space-between",
@@ -26,11 +27,15 @@ const Header: React.FC<HeaderProps> = ({ onAddClick }) => {
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-          <span style={{ fontSize: "24px" }}>🍔</span>
-          <span
-            style={{ fontSize: "20px", fontWeight: "bold", color: "#ffa500" }}
-          >
-            FoodWagen
+          <Image
+            src="/images/logo.svg"
+            alt="FoodWagen Logo"
+            width={24}
+            height={24}
+          />
+          <span style={{ fontSize: "32px", fontWeight: "bold" }}>
+            <span style={{ color: "#F17228" }}>Food</span>
+            <span style={{ color: "#FFB30E" }}>Wagen</span>
           </span>
         </div>
         <button
@@ -38,14 +43,16 @@ const Header: React.FC<HeaderProps> = ({ onAddClick }) => {
           onClick={onAddClick}
           data-test-id="food-add-meal-btn"
           style={{
-            padding: "0.75rem 1.5rem",
-            borderRadius: "6px",
+            padding: "12px 38px",
+            borderRadius: "14px",
             fontWeight: 600,
             cursor: "pointer",
             border: "none",
-            background: "#ffa500",
             color: "white",
             transition: "all 150ms",
+            background: "linear-gradient(90deg, #FFBA26 0%, #FF9A0E 100%)",
+            boxShadow: "0 2px 8px rgba(255, 165, 0, 0.3)",
+            transform: "translateY(-1px)",
           }}
         >
           Add Meal

@@ -19,7 +19,7 @@ const FoodGrid: React.FC<FoodGridProps> = ({
   if (loading) {
     return (
       <section style={{ padding: "3rem 2rem" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+        <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
           <div
             style={{
               display: "flex",
@@ -37,7 +37,7 @@ const FoodGrid: React.FC<FoodGridProps> = ({
   if (foods.length === 0) {
     return (
       <section style={{ padding: "3rem 2rem" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+        <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
           <div
             className="empty-state-message"
             style={{ textAlign: "center", padding: "3rem", color: "#666" }}
@@ -54,7 +54,7 @@ const FoodGrid: React.FC<FoodGridProps> = ({
 
   return (
     <section style={{ padding: "3rem 2rem" }}>
-      <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+      <div style={{ maxWidth: "1400px", margin: "0 auto" }}>
         <h2
           style={{
             fontSize: "2rem",
